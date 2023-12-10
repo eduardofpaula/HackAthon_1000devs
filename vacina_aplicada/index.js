@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 // importo as rotas da aplicacao;
-const router = require('./routes/routes.js');
+const router = require('./routes/routes');
 
 // inicializo a minha instancia do express;
 const app = express();

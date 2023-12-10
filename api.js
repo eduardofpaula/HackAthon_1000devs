@@ -1,4 +1,3 @@
-
 import pkg from 'pg';
 const { Pool } = pkg;
 
@@ -20,4 +19,3 @@ console.log(pool.options.database);
 showVacinasCount();
 
 export default pool;
-

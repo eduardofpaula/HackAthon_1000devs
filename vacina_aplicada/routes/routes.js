@@ -1,7 +1,7 @@
 const express = require('express');
 const crypto = require('crypto');
 // importa a api
-const pool = require('./../api');
+const pool = require('../api');
 
 
 // inicializa as rotas do express

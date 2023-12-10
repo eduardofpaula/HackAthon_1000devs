@@ -1,7 +1,7 @@
 //API importar express
 const express = require('express');
 const cors = require('cors');
-const rotaPaciente = require('./rotas/paciente.js')
+const rotaPaciente = require('../routes/paciente')
 //const rotaVacina = require('./rotas/vacina.js')
 
 //inicializa um servidor web com express
