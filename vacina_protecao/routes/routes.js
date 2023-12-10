@@ -21,9 +21,10 @@ router.get('/', async (req, res) => {
 })
 
 // [GET] - Pesquisa de vacina por proteção
-router.get('/protecao', async (req, res) => {
+router.get('/protecao/:doenca', async (req, res) => {
+    const doenca = req.params.doenca;
     try {
-        const pesquisa = await pool.query('SELECT * FROM VACINA WHERE DOENCA_PROTECAO')
+        const pesquisa = await pool.query(`SELECT * FROM VACINA WHERE DOENCA_PROTECAO ILIKE '%${doenca}%'`)
         res.send(pesquisa.rows)
     } catch (error) {
         console.error('Erro ao buscar vacina por proteção', error)
